@@ -1,0 +1,121 @@
+# ==========================================
+# Chicken Frito Copy - .gitignore
+# ==========================================
+
+# ---------- Dependencies ----------
+/node_modules
+/.pnp
+.pnp.*
+/.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ---------- Next.js ----------
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# ---------- Production build ----------
+/build
+/dist
+
+# ---------- Environment variables & secrets ----------
+.env
+.env.*
+!.env.example
+# Extra belt-and-braces: never commit private key / service-account material
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+service-account*.json
+*-service-account.json
+credentials.json
+secrets.json
+.id_rsa
+.id_ed25519
+.npmrc.local
+.netrc
+
+# ---------- Vercel ----------
+.vercel
+
+# ---------- Hosting / platform ----------
+.netlify
+.wrangler
+.firebase
+.serverless
+
+# ---------- Testing / coverage ----------
+/coverage
+*.lcov
+
+# ---------- Logs ----------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------- Caches ----------
+.cache
+.turbo
+.parcel-cache
+.eslintcache
+.stylelintcache
+.node_repl_history
+*.tsbuildinfo
+
+# ---------- Temp / OS files ----------
+tmp
+temp
+.temp
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
+*.swo
+*~
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+.directory
+
+# ---------- Editors / IDEs ----------
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.sublime-workspace
+*.sublime-project
+.history/
+
+# ---------- Local data / exports ----------
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.backup
+*.log
+*.csv
+*.xlsx
+*.xlsm
+*.docx
+*.pptx

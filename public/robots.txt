@@ -1,0 +1,4 @@
+# Chicken Frito Copy - demo/copia de proyecto.
+# Este sitio NO debe ser indexado por buscadores.
+User-Agent: *
+Disallow: /

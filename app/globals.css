@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+:root {
+	--background: #fffcf0;
+	--foreground: #1a0a0a;
+	--primary: #ed1c24;
+	--primary-foreground: #fff;
+	--accent: #f7941d;
+	--accent-foreground: #1a0a0a;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+}
+
+html {
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-universo), "Arial Black", "Arial", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
+	font-weight: 900;
+	line-height: 0.85;
+}
+
+.text-outline {
+	color: var(--background);
+	text-shadow: 0 0 1px #a01010;
+}
+@media (min-width: 768px) {
+	.text-outline {
+		text-shadow: 0 0 1px #a01010, -1px -1px #a01010, 1px -1px #a01010, -1px 1px #a01010, 1px 1px #a01010;
+	}
+}
+
+.text-outline-white {
+	color: var(--accent);
+	text-shadow: 0 0 1px var(--background);
+}
+@media (min-width: 768px) {
+	.text-outline-white {
+		text-shadow:
+			0 0 1px var(--background),
+			-1px -1px 0 var(--background),
+			1px -1px 0 var(--background),
+			-1px 1px 0 var(--background),
+			1px 1px 0 var(--background),
+			-2px -2px 0 var(--background),
+			2px -2px 0 var(--background),
+			-2px 2px 0 var(--background),
+			2px 2px 0 var(--background),
+			-3px -3px 0 var(--background),
+			3px -3px 0 var(--background),
+			-3px 3px 0 var(--background),
+			3px 3px 0 var(--background);
+	}
+}
+
+.description {
+	opacity: 0.9;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.fake-accent {
+	display: inline-block;
+	position: relative;
+}
+.fake-accent::after {
+	content: "";
+	background-color: currentColor;
+	border-radius: 1px;
+	width: 0.16em;
+	height: 0.035em;
+	position: absolute;
+	top: 0.18em;
+	left: 55%;
+	transform: translate(-10%) rotate(-35deg);
+}
+.fake-accent-i {
+	display: inline-block;
+	position: relative;
+}
+.fake-accent-i::after {
+	content: "";
+	background-color: currentColor;
+	border-radius: 1px;
+	width: 0.16em;
+	height: 0.035em;
+	position: absolute;
+	top: -0.1em;
+	left: 55%;
+	transform: translate(-10%) rotate(-35deg);
+}
+footer .fake-accent::after {
+	width: 0.12em;
+	height: 0.025em;
+	top: 0.1em;
+}
+.mobile-nav-link .fake-accent::after {
+	top: 0.08em;
+	left: 70%;
+}
+
+input,
+textarea,
+input::placeholder,
+textarea::placeholder {
+	font-family: inherit;
+}
+
+.branch-card span {
+	font-family: var(--font-geist-sans), sans-serif;
+}
+
+a,
+button {
+	font-weight: 900;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--primary);
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #a01010;
+}
+
+.menu-card {
+	will-change: transform, opacity;
+}
+
+html.lenis {
+	height: auto;
+}
+.lenis.lenis-smooth {
+	scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+.lenis.lenis-stopped,
+.overflow-hidden {
+	overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+	pointer-events: none;
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-universo), "Arial Black", "Arial", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 900;
+	line-height: 1.1;
+	overflow-x: hidden;
+}
